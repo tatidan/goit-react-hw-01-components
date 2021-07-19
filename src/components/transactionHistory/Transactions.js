@@ -1,9 +1,12 @@
-import React from "react";
-import TransactionItem from "./transactionItem/TransactionItem";
+import React from 'react';
+import TransactionItem from './transactionItem/TransactionItem';
 
 const Transactions = ({ transactions }) => {
   return (
-    <table class="transaction-history">
+    <table
+      class="transaction-history"
+      style={{ border: '1px solid black', width: 300, marginLeft: 70 }}
+    >
       <thead>
         <tr>
           <th>Type</th>
