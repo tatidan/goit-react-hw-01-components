@@ -1,19 +1,22 @@
 import React from "react";
-import testData from "../domashka";
+import user from "../data/user.json";
+import friends from "../data/friends.json";
+import stats from "../data/stats.json";
+import transactions from "../data/transactions.json";
+import Profile from "./socialProfile/Profile";
+import FriendList from "./friendList/FriendList";
+import Statistics from "./statistics/Statistics";
+import Transactions from "./transactionHistory/Transactions";
 
-const App = (props) => {
+const App = () => {
   return (
-    <div>
-      <h2>Hello Tatiana</h2>
-      <p>{props.nickName}</p>
-      <p>{props.message}</p>
-    </div>
+    <>
+      <Profile name={user.name} tag={user.tag} location={user.location} avatar={user.avatar} stats={user.stats} />
+      <FriendList friends={friends} />
+      <Statistics title="Upload stats" stats={stats} />;
+      <Transactions transactions={transactions} />;
+    </>
   );
 };
 
 export default App;
-
-//imr
-//slr
-//iml
-//rafce
