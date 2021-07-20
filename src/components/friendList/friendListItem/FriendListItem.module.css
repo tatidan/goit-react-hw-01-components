@@ -1,0 +1,18 @@
+.item {
+  list-style: none;
+  padding: 15px;
+}
+
+.status {
+  display: inline-flex;
+  margin: 0 4px;
+  padding: 8px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #5df321;
+}
+
+.disabled {
+  composes: status;
+  background-color: red;
+}

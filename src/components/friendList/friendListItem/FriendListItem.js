@@ -1,13 +1,12 @@
-// В зависимости от пропа isOnline, должен меняться цвет фона span.status.
-//Это можно сделать через разный CSS - класс или Styled Components.
-
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './FriendListItem.module.css';
 
 const FriendListItem = ({ friend }) => {
   return (
-    <li className="item" style={{ listStyle: 'none', padding: 15 }}>
-      <span className="status">{friend.isOnline}</span>
+    <li className={styles.item}>
+      <span className={friend.isOnline ? styles.status : styles.disabled} />
+
       <img
         className="avatar"
         src={friend.avatar}
